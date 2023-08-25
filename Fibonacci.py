@@ -24,3 +24,25 @@ primerValor = CalcularFibonacci(5)
 
 for N in primerValor:
     print(N)
+
+
+class Persona:
+    def __init__(self, nombre, edad) -> None:
+        self.nombre = nombre
+        self.edad = edad
+
+    def mostrarDatos(self):
+        return f"Nombre:{self.nombre} Edad:{self.edad}"
+
+
+class Estudiante(Persona):
+    def __init__(self, nombre, edad, grado) -> None:
+        super().__init__(nombre, edad)
+        self.grado = grado
+
+    def mgrado(self):
+        return f"Grado:{self.grado}"
+
+
+persona1 = Estudiante("hola", 12, 5)
+persona1.mgrado()

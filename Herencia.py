@@ -23,5 +23,16 @@ class Estudiante(Persona):
             f"Nombre: {self.nombre}, Edad: {self.edad}, Carrera: {self.carrera}")
 
 
-estudiante1 = Estudiante("Juan", 20, "Informatica")
-estudiante1.mostrar_datos()
+def modificar_funcion(funcion):
+    def modificar():
+        funcion()
+        print("Chao")
+    return modificar
+
+
+@modificar_funcion
+def saludo():
+    print("Hola ")
+
+
+saludo()
