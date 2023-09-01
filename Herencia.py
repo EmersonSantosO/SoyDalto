@@ -22,17 +22,3 @@ class Estudiante(Persona):
         print(
             f"Nombre: {self.nombre}, Edad: {self.edad}, Carrera: {self.carrera}")
 
-
-def modificar_funcion(funcion):
-    def modificar():
-        funcion()
-        print("Chao")
-    return modificar
-
-
-@modificar_funcion
-def saludo():
-    print("Hola ")
-
-
-saludo()
